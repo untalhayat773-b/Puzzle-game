@@ -45,9 +45,7 @@ puzzles = [
         "answer": "50",
     },
     {
-        "question": (
-            "Rearrange the letters to form a fruit: 'P P A L E'"
-        ),  # APPLE
+        "question": "Rearrange the letters to form a fruit: 'P P A L E'",
         "options": ["APPLE", "PINE", "PEACH", "PLUM"],
         "answer": "APPLE",
     },
@@ -68,8 +66,8 @@ active_puzzle = puzzles[current_puzzle_idx]
 st.markdown(f"### 🏆 Score: {st.session_state.score} | Level: {st.session_state.level}")
 st.markdown("---")
 
-# Display Puzzle
-st.subheader(f"Level {st.session_state.level Puzzle}")
+# Display Puzzle (Corrected Line)
+st.subheader(f"Level {st.session_state.level} Puzzle")
 st.write(active_puzzle["question"])
 
 # User Choice
@@ -88,4 +86,3 @@ if st.button("🔄 Reset Game"):
   st.session_state.score = 0
   st.session_state.level = 1
   st.rerun()
-  
